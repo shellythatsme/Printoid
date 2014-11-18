@@ -39,3 +39,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 gem 'rubocop', '~> 0.27.1'
+
+gem 'activeadmin', github: "activeadmin"
+gem 'devise'
