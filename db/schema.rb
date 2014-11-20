@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120175046) do
+ActiveRecord::Schema.define(version: 20141120190757) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -74,7 +74,10 @@ ActiveRecord::Schema.define(version: 20141120175046) do
     t.string   "picture"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "province_id"
   end
+
+  add_index "customers", ["province_id"], name: "index_customers_on_province_id"
 
   create_table "order_details", force: true do |t|
     t.integer  "OrderID"
@@ -109,7 +112,11 @@ ActiveRecord::Schema.define(version: 20141120175046) do
     t.integer  "hst"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "Customer_id"
+    t.string   "name"
   end
+
+  add_index "provinces", ["Customer_id"], name: "index_provinces_on_Customer_id"
 
   create_table "styles", force: true do |t|
     t.string   "colour"

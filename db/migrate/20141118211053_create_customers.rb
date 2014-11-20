@@ -5,7 +5,6 @@ class CreateCustomers < ActiveRecord::Migration
       t.string :lastName
       t.string :address
       t.string :city
-      t.string :province
       t.string :email
       t.string :phoneNumber
       t.string :picture
