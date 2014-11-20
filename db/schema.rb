@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141118211053) do
+ActiveRecord::Schema.define(version: 20141120175046) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -46,6 +46,23 @@ ActiveRecord::Schema.define(version: 20141118211053) do
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
 
+  create_table "categories", force: true do |t|
+    t.string   "cateroyName"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "contacts", force: true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.string   "phoneNumber"
+    t.string   "postalCode"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "customers", force: true do |t|
     t.string   "firstName"
     t.string   "lastName"
@@ -55,6 +72,47 @@ ActiveRecord::Schema.define(version: 20141118211053) do
     t.string   "email"
     t.string   "phoneNumber"
     t.string   "picture"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "order_details", force: true do |t|
+    t.integer  "OrderID"
+    t.integer  "ProductID"
+    t.integer  "unitPrice"
+    t.integer  "quanitity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "orders", force: true do |t|
+    t.integer  "CustomerId"
+    t.string   "orderDate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "productName"
+    t.integer  "categoryID"
+    t.integer  "quantity"
+    t.integer  "price"
+    t.string   "picture"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "provinces", force: true do |t|
+    t.integer  "gst"
+    t.integer  "pst"
+    t.integer  "hst"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "styles", force: true do |t|
+    t.string   "colour"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

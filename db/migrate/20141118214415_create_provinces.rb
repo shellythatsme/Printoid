@@ -1,9 +1,9 @@
 class CreateProvinces < ActiveRecord::Migration
   def change
     create_table :provinces do |t|
-      t.integer :gst
-      t.integer :pst
-      t.integer :hst
+      t.decimal :gst
+      t.decimal :pst
+      t.decmial :hst
 
       t.timestamps
     end

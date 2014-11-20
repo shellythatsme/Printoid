@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration
       t.string :productName
       t.integer :categoryID
       t.integer :quantity
-      t.double :price
+      t.integer :price
       t.string :picture
       t.text :description
 
