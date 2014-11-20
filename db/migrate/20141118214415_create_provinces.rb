@@ -3,7 +3,8 @@ class CreateProvinces < ActiveRecord::Migration
     create_table :provinces do |t|
       t.decimal :gst
       t.decimal :pst
-      t.decmial :hst
+      t.decimal :hst
+      t.string  :name
 
       t.timestamps
     end

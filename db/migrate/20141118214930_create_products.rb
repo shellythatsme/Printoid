@@ -1,8 +1,7 @@
 class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
-      t.string :productName
-      t.integer :categoryID
+      t.string :name
       t.integer :quantity
       t.integer :price
       t.string :picture
