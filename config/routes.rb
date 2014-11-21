@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-get 'pages/index'
+  get 'pages/index'
 
-devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   root 'pages#index'
