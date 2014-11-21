@@ -43,4 +43,4 @@ gem 'rubocop', '~> 0.27.1'
 gem 'activeadmin', github: "activeadmin"
 gem 'devise'
 
-gem 'slim', '~> 2.1.0'
+gem 'slim-rails'
