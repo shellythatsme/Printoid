@@ -1,8 +1,7 @@
 # class
 class PagesController < ApplicationController
   def index
-    @product = Product.limit(5)
-    @categories = Category.all
+    @products = Product.all
   end
 
   def about_us

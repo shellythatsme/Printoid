@@ -6,5 +6,10 @@ nav
     li Womens
     li Kids
 
-== render "product"
+- for product in products do
+  #product
+    h1 product.name
+    p product.price
+
+
 
