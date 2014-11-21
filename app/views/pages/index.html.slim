@@ -6,10 +6,12 @@ nav
     li Womens
     li Kids
 
-- for product in products do
+- for product in @products do
   #product
-    h1 product.name
-    p product.price
+    h1 = product.name
+    p = product.price
+    #img
+      - image_tag product.picture
 
 
 
