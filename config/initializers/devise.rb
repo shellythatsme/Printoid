@@ -4,13 +4,16 @@ Devise.setup do |config|
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
-  # config.secret_key = '62562aada1c2b8717cad39ac1e2a473db918b29226e9ca5906d3cff51e3032a57bfd047b6d4770a078e83dcbb9fb95b84932f2f53ddf42369e49d7a13c1e8c22'
+  # config.secret_key = '62562aada1c2b8717cad39ac1e2a473db918b29226
+  # e9ca5906d3cff51e3032a57bfd047b6d4770a078e83dcbb9fb95b84932f2f53d
+  # df42369e49d7a13c1e8c22'
 
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+  config.mailer_sender = 'please-change-me-at-config-
+                          initializers-devise@example.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -26,31 +29,40 @@ Devise.setup do |config|
   # just :email. You can configure it to use [:username, :subdomain], so for
   # authenticating a user, both parameters are required. Remember that those
   # parameters are used only when authenticating and not when retrieving from
-  # session. If you need permissions, you should implement that in a before filter.
+  # session. If you need permissions,
+  # you should implement that in a before filter.
   # You can also supply a hash where the value is a boolean determining whether
-  # or not authentication should be aborted when the value is not present.
+  # or not authentication should be aborted
+  # when the value is not present.
   # config.authentication_keys = [ :email ]
 
-  # Configure parameters from the request object used for authentication. Each entry
+  # Configure parameters from the request object used for authentication.
+  # Each entry
   # given should be a request method and it will automatically be passed to the
-  # find_for_authentication method and considered in your model lookup. For instance,
-  # if you set :request_keys to [:subdomain], :subdomain will be used on authentication.
-  # The same considerations mentioned for authentication_keys also apply to request_keys.
+  # find_for_authentication method and
+  # considered in your model lookup. For instance,
+  # if you set :request_keys to [:subdomain],
+  # :subdomain will be used on authentication.
+  # The same considerations mentioned for
+  # authentication_keys also apply to request_keys.
   # config.request_keys = []
 
   # Configure which authentication keys should be case-insensitive.
   # These keys will be downcased upon creating or modifying a user and when used
   # to authenticate or find a user. Default is :email.
-  config.case_insensitive_keys = [ :email ]
+  config.case_insensitive_keys = [:email]
 
   # Configure which authentication keys should have whitespace stripped.
   # These keys will have whitespace before and after removed upon creating or
-  # modifying a user and when used to authenticate or find a user. Default is :email.
-  config.strip_whitespace_keys = [ :email ]
+  # modifying a user and when used to
+  # authenticate or find a user. Default is :email.
+  config.strip_whitespace_keys = [:email]
 
   # Tell if authentication through request.params is enabled. True by default.
-  # It can be set to an array that will enable params authentication only for the
-  # given strategies, for example, `config.params_authenticatable = [:database]` will
+  # It can be set to an array that
+  # will enable params authentication only for the
+  # given strategies, for example,
+  # `config.params_authenticatable = [:database]` will
   # enable it only for database (email + password) authentication.
   # config.params_authenticatable = true
 
@@ -89,7 +101,8 @@ Devise.setup do |config|
 
   # ==> Configuration for :database_authenticatable
   # For bcrypt, this is the cost for hashing the password and defaults to 10. If
-  # using other encryptors, it sets how many times you want the password re-encrypted.
+  # using other encryptors, it sets
+  # how many times you want the password re-encrypted.
   #
   # Limiting the stretches to just one in
   # testing will increase the performance of
