@@ -7,7 +7,7 @@ devise_for :admin_users, ActiveAdmin::Devise.config
 
   root 'pages#index'
 
-  get 'aboutUs' => 'homepage#aboutUs', as: 'AboutUs'
+  get 'aboutUs' => 'pages#aboutUs', as: 'AboutUs'
 
   get 'product' => 'product#display', as: 'display'
 
