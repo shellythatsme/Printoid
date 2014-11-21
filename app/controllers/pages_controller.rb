@@ -5,6 +5,6 @@ class PagesController < ApplicationController
   end
 
   def about_us
-    @page = Contact.all
+    @pages = Contact.all
   end
 end
