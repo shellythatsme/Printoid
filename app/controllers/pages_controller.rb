@@ -4,7 +4,7 @@ class PagesController < ApplicationController
     @products = Product.all
   end
 
-  def aboutUs
+  def about_us
     @pages = Contact.all
   end
 end

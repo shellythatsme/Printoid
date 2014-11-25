@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  get 'aboutUs' => 'pages#aboutUs', as: 'about'
+  get 'about_us' => 'pages#about_us', as: 'about'
 
   get 'product' => 'product#display', as: 'display'
 
