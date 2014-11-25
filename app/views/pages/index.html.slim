@@ -2,8 +2,6 @@ h1 Printoid
 
 nav 
   ul
-    li Mens
-    li Womens
-    li Kids
+    li == link_to 'About Us', about_url
 
-- render @products
+== render partial: 'products/product', collection: @products, as: 'product'
