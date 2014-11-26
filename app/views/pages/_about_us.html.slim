@@ -2,14 +2,17 @@
   h1 = page.title
   p = page.content
   #contact
-    p Phone Number:
-    p = page.phoneNumber
+    h1 Contact
+    p
+      | Phone Number: 
+      = page.phoneNumber
+    p
+      | Postal Code: 
+      = page.postalCode
 
-    p Postal Code:
-    p = page.postalCode
-
-    p Email: 
-    p = page.email
+    p 
+      |Email: 
+      = page.email
 
   p = page.created_at
 
