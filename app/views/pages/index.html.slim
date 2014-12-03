@@ -1,7 +1,13 @@
-== render 'layouts/navbar'
+section
+  nav
+    ul
+      li == link_to 'Shirts', shirts_url
+      li == link_to 'Shoes', shoes_url
+      li == link_to 'Pants', pants_url
+      li == link_to 'Hats', hats_url
+      li == link_to 'Other', other_url
 
-nav 
-  ul
-    li == link_to 'About Us', about_url
+#all_products
+  == render partial: 'products/product', collection: @products, as: 'product'
 
-== render partial: 'products/product', collection: @products, as: 'product'
+== paginate @products

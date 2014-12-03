@@ -1,0 +1,6 @@
+h1 Search Results for == params[:search_words]
+
+= if @product.size.zero?
+  p No products found.
+= else
+  == render partial: 'products/product', collection: @search, as: 'product'

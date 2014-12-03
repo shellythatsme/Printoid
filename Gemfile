@@ -45,3 +45,7 @@ gem 'devise'
 gem 'slim-rails'
 
 gem 'carrierwave'
+
+gem 'kaminari'
+
+gem 'filterrific'

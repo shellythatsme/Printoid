@@ -6,7 +6,11 @@ html
     /! == javascript_include_tag 'application', 'data-turbolinks-track' => true 
     /! == csrf_meta_tags
   body
+    header
+      == render 'layouts/navbar'
+
     #content
       == yield
 
-    == render 'layouts/footer'
+    footer
+      == render 'layouts/footer'

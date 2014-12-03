@@ -1,5 +1,5 @@
 #product
-  h1 = product.name
-  p = product.price
+  h1 = link_to product.name, show_url(product)
   #img
     = link_to image_tag(product.picture)
+  p = product.price

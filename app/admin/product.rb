@@ -10,6 +10,7 @@ ActiveAdmin.register Product do
       f.input :quantity
       f.input :category
       f.input :picture
+      f.input :category_id
     end
     f.actions
   end
