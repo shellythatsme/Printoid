@@ -2,9 +2,20 @@
 class PagesController < ApplicationController
   def index
     @products = Product.all.page params[:page]
-    @filterrific = Filterrific.new(Product, params[:filterrific])
-    @product = Product.filterrific_find(@filterrific).page(params[:page])
 
+    @filterrific = Filterrific.new(Product, params[:filterrific] || session[:filterrific_products])
+    @products = Product.filterrific_find(@filterrific).page(params[:page])
+    session[:filterrific_products] = @filterrific.to_hash
+
+    respond_to do |format|
+      format.html
+      format.js
+    end
+
+    def reset_filterrific
+      session[:filterrific_products] = nil
+      redirect_to :action => :index
+    end
   end
 
   def about_us
@@ -38,8 +49,5 @@ class PagesController < ApplicationController
   def search
   end
 
-  respond_to do |format|
-    format.html
-    format.js
-  end
+  
 end
